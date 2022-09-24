@@ -2,6 +2,9 @@ package com.example.vertical.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import javax.persistence.AttributeOverride;
 
 @Controller
 public class IndexController {
@@ -24,5 +27,9 @@ public class IndexController {
     @GetMapping("/write")
     private String write(){
         return "write";
+    }
+    @GetMapping("/user/{id}")
+    private void FindUserById(@PathVariable("id") String id){
+
     }
 }
